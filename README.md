@@ -1,12 +1,12 @@
 # FinalProject
 
-##The Mountain Escape
+## The Mountain Escape
 Where the soul awakens, and nature heals.
 
-###Project Overview
+### Project Overview
 The Mountain Escape is a fictional boutique glamping retreat designed to provide guests with a peaceful outdoor experience while enjoying the comforts of luxury accommodations. The goal of this project was to create a professional single-page website that demonstrates front-end web development skills using semantic HTML, CSS, and JavaScript while meeting all project requirements.
 
-###Project Requirements
+### Project Requirements
 The project required creating a complete, fixed-width (1280px) website using only original code written from scratch.
 Required features included:
 --Semantic HTML structure
@@ -22,33 +22,33 @@ Required features included:
 --HTML and CSS validation
 --No console errors
 --JavaScript loaded using the defer attribute
-###Part 2
+### Part 2
 --jQuery Widget: Use at least one UI element like tabs, accordions, or any other interactive plugin.
 --AJAX / API: Load at least three pieces of theme-related content from a third-party API or a custom JSON file.
 --Web Storage: Save and retrieve data (automatically or via a user form) using localStorage or sessionStorage.
 --Slideshow / Carousel: Display a minimum of three images using a jQuery plugin or another JavaScript library.
 
-###Inspiration & Goals
+### Inspiration & Goals
 Inspired by modern glamping resorts, I wanted to create a clean, welcoming website that combined beautiful visuals with interactive features. My goals were to build a professional-looking site while strengthening my HTML, CSS, and JavaScript skills.
 
-###Development Process
+### Development Process
 I planned the site's layout and content, designed a simple nature-inspired interface, then built the website using semantic HTML, CSS, and JavaScript. Interactive features include:
 --Light/Dark mode
 --Amenities product display
 --Number guessing game
 --Contact form with validation and customer object creation
 
-###Tools & Assets
+### Tools & Assets
 HTML5, CSS3, JavaScript
 Visual Studio Code
 Chrome Developer Tools
 Adobe Stock images
 W3C HTML & CSS Validators
 
-###Challenges & Reflection
+### Challenges & Reflection
 The biggest challenges were form validation and JavaScript event handling. I also found configuring data persistence with web storage challenging as well. This project strengthened my understanding of front-end development, DOM manipulation, and creating a polished, interactive user experience.
 
-###Future Improvements
+### Future Improvements
 With more time, I would add responsive design, online booking, an image gallery, guest testimonials, and an interactive map.
 
 ## Option 1: Independent Hand-Coding Path
