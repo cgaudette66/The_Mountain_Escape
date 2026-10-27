@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Christine Gaudette">
+    <meta name="description" content="The Mountain Escape - Where the soul awakens, and nature heals.">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index,follow">
+
+    <title>The Mountain Escape</title>
+
+    <!-- Favicon  -->
+    <!--
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        -->
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="styles.css" rel="stylesheet">
+    <!-- javascript  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="scripts.js" defer></script>
+
+    <!-- all images on site were found on Adobe Stock -->
+
+</head>
+
+<body>
+    <!-- ADD skip to main content -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+    <header id="top">
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="a">
+                        <path d="m18.512 18.512h62.977v62.977h-62.977z" />
+                    </clipPath>
+                </defs>
+                <g clip-path="url(#a)">
+                    <path
+                        d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531"
+                        fill-rule="evenodd" />
+                </g>
+            </svg>
+        </button>
+        <h1>The Mountain Escape</h1>
+        <p>Where the soul awakens, and nature heals.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#nature">Nature Guides</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#gamePlay">Guess to Win</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="show">
+            <h2>Warm & Inviting</h2>
+            <p>The Mountain Escape is a boutique outdoor retreat offering luxury canvas tent accommodations in a
+                stunning mountain setting. Designed for rest and renewal, we invite guests to unplug from technology,
+                reconnect with nature, enjoy incredible hiking, and experience the comfort of premium bedding beneath
+                the stars. It's a place to slow down, breathe deeply, and leave feeling refreshed.</p>
+            <img src="images/tent_mountain.jpeg"
+                alt="Glamping in the mountain with crackling fireplace and stunning panoramic views of pristine nature in luxury tent accommodation" width="100%">
+        </section>
+        <section id="contactForm" class="hide">
+            <h2>Contact Us</h2>
+            <form id="validateOnSubmit">
+                <!-- <label for="fullName">Full Name<span class="required">*</span></label>
+                <span class="errorMessage">Please enter your Full Name:</span>
+                <input type="text" name="fullName" id="fullName"> -->
+
+                <label for="fName">First Name<span class="required">*</span></label>
+                <span class="errorMessage">Please enter your First Name:</span>
+                <input type="text" name="fName" id="fName">
+
+                <label for="lName">Last Name<span class="required">*</span></label>
+                <span class="errorMessage">Please enter your Last Name:</span>
+                <input type="text" name="lName" id="lName">
+
+                <label for="phone">Phone</label>
+                <span class="errorMessage">Please enter your Phone with the correct format of ###-###-####
+                    (123-456-7890):
+                </span>
+                <input type="tel" name="phone" id="phone" value="###-###-####">
+                <label for="email">Email</label>
+                <span class="errorMessage">Please enter a valid Email:</span>
+                <input name="email" id="email" type="email">
+
+                <fieldset>
+                    <legend>Preferred Method of Contact</legend>
+                    <input type="radio" name="contactPref" id="prefEmail" checked value="email">
+                    <label for="prefEmail">Email</label>
+                    <input type="radio" name="contactPref" id="prefPhone" value="phone">
+                    <label for="prefPhone">Phone</label>
+                </fieldset>
+
+                <label for="comments">Comments<span class="required">*</span></label>
+                <span class="errorMessage">Please enter your Comments:</span>
+                <textarea name="comments" id="comments"></textarea>
+                <input type="submit" name="submitFormButton" id="submitFormButton" value="Submit Form">
+            </form>
+            <img src="images/tent_on_platform.jpeg" alt="tent">
+            <!-- upon success, this thank you is revealed -->
+            <div id="success" class="hide">
+                <p id="objectDisplay"></p>
+            </div>
+
+            <div id="modal" class="hidden">
+                <div id="inner-modal">
+                    <p>
+                        There is already a user in local storage.
+                        Do you want to erase that user's information and save this information instead?
+                    </p>
+
+                    <button type="button" id="confirm">
+                        Yes, Add the New User to Storage
+                    </button>
+
+                    <button type="button" id="cancel">
+                        No, Do Not Replace the Original User in Storage
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="amenities" class="hide">
+            <h2>Amenities</h2>
+            <ul id="productNav">
+                <li><a href="#coffee">Morning Coffee</a></li>
+                <li><a href="#hikes">Group Hikes</a></li>
+                <li><a href="#sunset">Sunset Yoga</a></li>
+            </ul>
+            <dl id="coffee" class="showDL">
+                <dt>Coffee Barista Station</dt>
+                <dd>
+                    This Artisanal Manual Pour-Over Coffee station is an all-in-one setup designed for specialty coffee
+                    lovers who enjoy a mindful, hands-on brewing ritual. Blending vintage elegance with modern
+                    precision, this kit is perfectly suited for scenic outdoor camping.
+                </dd>
+                <dd>
+                    <figure>
+                        <img src="images/CoffeeStation.jpeg"
+                            alt="Outdoor coffee brewing setup with grinder, kettle, and glass dripper overlooking a scenic mountain landscape in morning light.">
+                        <figcaption>
+                            Outdoor coffee brewing setup with grinder, kettle, and glass dripper overlooking a scenic
+                            mountain landscape in morning light.
+                        </figcaption>
+                    </figure>
+                </dd>
+            </dl>
+            <dl id="hikes" class="hideDL">
+                <dt>Group Hikes</dt>
+                <dd>
+                    Discover the beauty of the mountains with our guided group hikes, designed for guests of all
+                    experience levels. Led by knowledgeable local guides, each hike takes you through scenic forests,
+                    peaceful meadows, and breathtaking overlooks while sharing fascinating insights about the area's
+                    wildlife, plants, and natural history. Whether you're seeking a leisurely nature walk or a more
+                    adventurous trek, our hikes provide the perfect opportunity to explore, connect with fellow guests,
+                    and experience the serenity of the outdoors.
+                </dd>
+                <dd>
+                    <figure>
+                        <img src="images/hiking.jpeg"
+                            alt="Closeup of hiking boots on rocky mountain path, two hikers walking towards the setting sun.">
+                        <figcaption>
+                            Closeup of hiking boots on rocky mountain path, two hikers walking towards the setting sun.
+                        </figcaption>
+                    </figure>
+                </dd>
+            </dl>
+            <dl id="sunset" class="hideDL">
+                <dt>Sunset Yoga & Meditation</dt>
+                <dd>
+                    As the sun dips behind the mountains, guests gather for peaceful outdoor yoga and guided meditation
+                    overlooking the valley. These sessions are designed for every experience level and offer the perfect
+                    way to unwind after a day of hiking and exploration.
+                </dd>
+                <dd>
+                    <figure>
+                        <img src="images/sunsetYoga.jpeg"
+                            alt="Group meditation at sunset overlooking scenic mountain valley.">
+                        <figcaption>
+                            Group meditation at sunset overlooking scenic mountain valley.
+                        </figcaption>
+                    </figure>
+                </dd>
+            </dl>
+        </section>
+        <section id="gamePlay" class="hide">
+            <h2>Guess to Win!</h2>
+            <form id="guessNumber">
+                <label for="enterNumber">Enter a number from 1 to 10<span class="required">*</span></label>
+                <span class="errorMessage">Please enter a whole Number from 1 to 10:</span>
+                <input type="number" name="enterNumber" id="enterNumber" min="1" max="10" step="1">
+                <input type="submit" name="submitGameButton" id="submitGameButton" value="Click to Win">
+                <!-- upon success, this thank you is revealed -->
+                <div id="gameSuccess" class="hide">
+                    <p id="resultsGame"></p>
+                </div>
+            </form>
+        </section>
+        <section id="nature" class="hide">
+            <h2>Nature Guides</h2>
+            <div id="accordion">
+                <h3>Birds</h3>
+                <div id="birdResults">
+                    <!-- 10 random bird results -->
+                </div>
+                <h3>Plants</h3>
+                <div id="plantResults">
+                    <!-- 10 random plant results -->
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="hide">
+            <h2>Gallery</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="images/CoffeeStation.jpeg"
+                            alt="Outdoor coffee brewing setup with grinder, kettle, and glass dripper overlooking a scenic mountain landscape in morning light.">
+                        </div>
+                    <div class="swiper-slide">
+                        <img src="images/hiking.jpeg"
+                            alt="Closeup of hiking boots on rocky mountain path, two hikers walking towards the setting sun.">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/sunsetYoga.jpeg"
+                            alt="Group meditation at sunset overlooking scenic mountain valley.">
+                    </div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy;2026 - GIT417 Final Project - Christine Gaudette</p>
+    </footer>
+    <!-- back to top link using positioning -->
+    <a href="#top" aria-label="back to top of page" id="topButton">
+        <svg viewBox="0 0 512 512" width="100">
+            <path
+                d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm143.6 28.9l72.4-75.5V392c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24V209.4l72.4 75.5c9.3 9.7 24.8 9.9 34.3.4l10.9-11c9.4-9.4 9.4-24.6 0-33.9L273 107.7c-9.4-9.4-24.6-9.4-33.9 0L106.3 240.4c-9.4 9.4-9.4 24.6 0 33.9l10.9 11c9.6 9.5 25.1 9.3 34.4-.4z" />
+        </svg>
+    </a>
+</body>
+
+</html>
